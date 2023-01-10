@@ -25,7 +25,7 @@
 </head>
 <body>
   <div class="container-scroller">
-    <div class="row p-0 m-0 proBanner" id="proBanner">
+    {{-- <div class="row p-0 m-0 proBanner" id="proBanner">
       <div class="col-md-12 p-0 m-0">
         <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
           <div class="ps-lg-1">
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
@@ -67,7 +67,7 @@
             <h3 class="welcome-sub-text">Your performance summary this week </h3>
           </li>
         </ul>
-        <ul class="navbar-nav ms-auto">
+        {{-- <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
@@ -209,7 +209,7 @@
               <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             </div>
           </li>
-        </ul>
+        </ul> --}}
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
           <span class="mdi mdi-menu"></span>
         </button>
@@ -396,7 +396,7 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item nav-category">UI Elements</li>
+          {{-- <li class="nav-item nav-category">UI Elements</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi mdi-floor-plan"></i>
@@ -410,8 +410,8 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item nav-category">Forms and Datas</li>
+          </li> --}}
+          {{-- <li class="nav-item nav-category">Forms and Datas</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="menu-icon mdi mdi-card-text-outline"></i>
@@ -459,17 +459,17 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item nav-category">pages</li>
+          </li> --}}
+          <li class="nav-item nav-category">User</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title">Profile</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/login"> Login </a></li>
               </ul>
             </div>
           </li>
@@ -488,7 +488,7 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="home-tab">
-                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                {{-- <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
                       <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
@@ -510,12 +510,12 @@
                       <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
                     </div>
                   </div>
-                </div>
+                </div> --}}
                 <div class="tab-content tab-content-basic">
                   <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
                     <div class="row">
                       <div class="col-sm-12">
-                        <div class="statistics-details d-flex align-items-center justify-content-between">
+                        {{-- <div class="statistics-details d-flex align-items-center justify-content-between">
                           <div>
                             <p class="statistics-title">Bounce Rate</p>
                             <h3 class="rate-percentage">32.53%</h3>
@@ -546,7 +546,7 @@
                             <h3 class="rate-percentage">2m:35s</h3>
                             <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
                           </div>
-                        </div>
+                        </div> --}}
                       </div>
                     </div> 
                     <div class="row">
@@ -570,7 +570,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 d-flex flex-column">
+                      {{-- <div class="col-lg-4 d-flex flex-column">
                         <div class="row flex-grow">
                           <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                             <div class="card bg-primary card-rounded">
@@ -621,9 +621,9 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div> --}}
                     </div>
-                    <div class="row">
+                    {{-- <div class="row">
                       <div class="col-lg-8 d-flex flex-column">
                         <div class="row flex-grow">
                           <div class="col-12 grid-margin stretch-card">
@@ -1201,7 +1201,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
               </div>
@@ -1210,12 +1210,7 @@
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
-          </div>
-        </footer>
+        
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
