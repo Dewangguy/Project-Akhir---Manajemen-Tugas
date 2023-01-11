@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star Admin2 </title>
+  <title>Classroom Lite </title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset('template/vendors/feather/feather.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/mdi/css/materialdesignicons.min.css')}}">
@@ -44,14 +44,14 @@
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a>
+                  <a class="btn btn-block btn-primary btn-lg-4 font-weight-medium auth-form-btn" href="/home">SIGN IN</a>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   {{-- <div class="form-check">
                     <label class="form-check-label text-muted">
                       <input type="checkbox" class="form-check-input">
                       Keep me signed in
-                    </label>
+                    </label> 
                   </div> --}}
                   {{-- <a href="#" class="auth-link text-black">Forgot password?</a> --}}
                 </div>
