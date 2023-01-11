@@ -44,14 +44,14 @@
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg-4 font-weight-medium auth-form-btn" href="">SIGN IN</a>
+                  <a class="btn btn-block btn-primary btn-lg-4 font-weight-medium auth-form-btn" href="/home">SIGN IN</a>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   {{-- <div class="form-check">
                     <label class="form-check-label text-muted">
                       <input type="checkbox" class="form-check-input">
                       Keep me signed in
-                    </label>
+                    </label> 
                   </div> --}}
                   {{-- <a href="#" class="auth-link text-black">Forgot password?</a> --}}
                 </div>
