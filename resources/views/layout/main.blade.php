@@ -52,11 +52,11 @@
           </button>
         </div>
         <div>
-          <a class="navbar-brand brand-logo" href="index.html">
-            <img src="images/logo.svg" alt="logo" />
+          <a class="navbar-brand brand-logo" href="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png">
+            <img src="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png" alt="logo" />
           </a>
           <a class="navbar-brand brand-logo-mini" href="index.html">
-            <img src="images/logo-mini.svg" alt="logo" />
+            <img src="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png" alt="logo" />
           </a>
         </div>
       </div>
@@ -67,8 +67,8 @@
             <h3 class="welcome-sub-text">Your performance summary this week </h3>
           </li>
         </ul>
-        {{-- <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown d-none d-lg-block">
+        <ul class="navbar-nav ms-auto">
+          {{-- <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
               <a class="dropdown-item py-3" >
@@ -100,15 +100,15 @@
                 </div>
               </a>
             </div>
-          </li>
-          <li class="nav-item d-none d-lg-block">
+          </li> --}}
+          {{-- <li class="nav-item d-none d-lg-block">
             <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
               <span class="input-group-addon input-group-prepend border-right">
                 <span class="icon-calendar input-group-text calendar-icon"></span>
               </span>
               <input type="text" class="form-control">
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <form class="search-form" action="#">
               <i class="icon-search"></i>
@@ -118,8 +118,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
               <i class="icon-mail icon-lg"></i>
+              <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
+            {{-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
               <a class="dropdown-item py-3 border-bottom">
                 <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
                 <span class="badge badge-pill badge-primary float-right">View all</span>
@@ -151,14 +152,14 @@
                   <p class="fw-light small-text mb-0"> 2 days ago </p>
                 </div>
               </a>
-            </div>
+            </div> --}}
           </li>
-          <li class="nav-item dropdown"> 
+          {{-- <li class="nav-item dropdown"> 
             <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="icon-bell"></i>
               <span class="count"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
+            </a> --}}
+            {{-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
               <a class="dropdown-item py-3">
                 <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
                 <span class="badge badge-pill badge-primary float-right">View all</span>
@@ -191,7 +192,7 @@
                   <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
                 </div>
               </a>
-            </div>
+            </div> --}}
           </li>
           <li class="nav-item dropdown d-none d-lg-block user-dropdown">
             <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -209,7 +210,7 @@
               <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             </div>
           </li>
-        </ul> --}}
+        </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
           <span class="mdi mdi-menu"></span>
         </button>
@@ -391,7 +392,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -550,20 +551,20 @@
                       </div>
                     </div> 
                     <div class="row">
-                      <div class="col-lg-8 d-flex flex-column">
+                      <div class="col-lg-4 d-flex flex-column">
                         <div class="row flex-grow">
-                          <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
+                          <div class="col-10 col-lg-4 col-lg-12  ">
                             <div class="card card-rounded">
                               <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-start">
                                   <div>
-                                   <h4 class="card-title card-title-dash">Performance Line Chart</h4>
-                                   <h5 class="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5>
+                                   <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
+                                   <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
                                   </div>
-                                  <div id="performance-line-legend"></div>
+                                  <div></div>
                                 </div>
-                                <div class="chartjs-wrapper mt-5">
-                                  <canvas id="performaneLine"></canvas>
+                                <div>
+                                  <canvas></canvas>
                                 </div>
                               </div>
                             </div>
