@@ -24,3 +24,11 @@ Route::get('/', function() {
 Route::get('/login', function() {
     return view('admin.login');
 });
+
+Route::get('/blmselesai', function() {
+    return view('layout.daftartugas.belumselesai');
+});
+
+Route::get('/selesai', function() {
+    return view('layout.daftartugas.selesai');
+});

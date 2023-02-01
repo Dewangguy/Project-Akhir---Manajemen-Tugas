@@ -45,7 +45,7 @@
       <div class="navbar-menu-wrapper d-flex align-items-top"> 
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h1>
+            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Dewangga Bintang N</span></h1>
             <h3 class="welcome-sub-text">Your performance summary this week </h3>
           </li>
         </ul>
@@ -63,12 +63,12 @@
           </li>
           <li class="nav-item dropdown d-none d-lg-block user-dropdown">
             <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="images/faces/face8.jpg" alt="Profile image"> </a>
+              <img class="img-xs rounded-circle" src="https://cdn.discordapp.com/attachments/835568551435829279/1062989914779684884/latest.png" alt="Profile image"> </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <div class="dropdown-header text-center">
-                <img class="img-md rounded-circle" src="images/faces/face8.jpg" alt="Profile image">
-                <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+              <div class="dropdown-header text-center"
+                <img class="img-md rounded-circle" src="https://cdn.discordapp.com/attachments/835568551435829279/1062989914779684884/latest.png">
+                <p class="mb-1 mt-3 font-weight-semibold">Dewangga Bintang</p>
+                <p class="fw-light text-muted mb-0">dewangguy@gmail.com</p>
               </div>
               <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
               <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
@@ -208,29 +208,52 @@
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
-             <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                  <i class="menu-icon mdi mdi-account-circle-outline"></i>
-                  <span class="menu-title">Dashboard</span>
-                  <i class="menu-arrow"></i>
-                </a>
-                <div class="collapse" id="auth">
-                  <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="/login"> Login </a></li>
-                  </ul>
-                </div>
-              </li>
-          <li class="nav-item nav-category">User</li>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">Tugas</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">Profile</span>
+              <span class="menu-title">Daftar Tugas</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/login"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/blmselesai"> Belum Selesai </a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/selesai"> Selesai </a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item nav-category">Daftar Kelas</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="menu-icon mdi mdi-account-circle-outline"></i>
+              <span class="menu-title">Nama Mapel</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/login"> Pendidikan Agama Islam </a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/login"> Bahasa Inggris </a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/login"> Bahasa Indonesia </a></li>
               </ul>
             </div>
           </li>
@@ -247,71 +270,64 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-sm-12">
-              <div class="home-tab">               
-                <div class="tab-content tab-content-basic">
-                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
-                    <div class="row">
-                      <div class="col-sm-4">
-                      </div>
-                    </div> 
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class=" flex-column">
-                            <div class="col-12 col-lg-12 col-lg-12  ">
-                              <div class="card card-rounded">
-                                <div class="card-body">
-                                  <div class="d-sm-flex justify-content-between align-items-start">
-                                    <div>
-                                      <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                      <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                      <div>
-                                        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-                                      </div>
-                                    </div>
-                                   
-                                    <canvas></canvas>
-                                  </div>
-                                  <div class="mb-4">
-                                    <label for="formFileMultiple" class="form-label">Tugas Anda</label>
-                                    <input class="form-control" type="file" id="formFileMultiple" multiple>
-                                  </div>
-                                    <div class="d-grid gap-2 col-6 mx-auto">
-                                  <a class="btn btn-primary" href="login" role="button">Link</a>
-                                </div>
-                              </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div><br>
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="row flex-column">
-                                <div class="col-12 col-lg-4 col-lg-12  ">
-                                  <div class="card card-rounded">
-                                    <div class="card-body">
-                                      <div class="d-sm-flex justify-content-between align-items-start">
-                                        <div>
-                                         <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                         <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                         <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-                                        </div>
-                                        <canvas></canvas>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+      <div class="col-sm-12">
+       <div class="home-tab">               
+         <div class="tab-content tab-content-basic">
+       <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+         <div class="row">
+        <div class="col-sm-4">
+          </div>
+        </div> 
+            </div>
+            </div>
+            </div><br>
+              <div class="row">
+              <div class="col-md-6">
+                  <div class="card card-rounded">
+                    <div class="card-body">
+                       <div class="d-sm-flex justify-content-between align-items-start">
+                         <div>
+                      <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
+                      <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
+                         </div>
+                           <div></div>
                     </div>
+              <div>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea">Comments</label>
+                </div>
+                <a class="btn btn-primary" href="#" role="button">Link</a>
+              <canvas></canvas>
+              </div>
+                </div>
+              </div>
+              </div>
+
+            <div class="col-md-6">
+             <div class="card card-rounded">
+              <div class="card-body">
+              <div class="d-sm-flex justify-content-between align-items-start">
+               <div>
+            <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
+            <h5 class="card-subtitle card-subtitle-dash">Bahasa Inggris</h5>
+             </div>
+              </div>
+               <div>
+             <canvas></canvas>
+        </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
         {{-- <div class="main-panel"> --}}
           <div class="content-wrapper">
             <div class="row">
@@ -323,46 +339,6 @@
                         <div class="col-sm-4">
                         </div>
                       </div> 
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class=" flex-column">
-                              <div class="col-12 col-lg-12 col-lg-12  ">
-                                <div class="card card-rounded">
-                                  <div class="card-body">
-                                    <div class="d-sm-flex justify-content-between align-items-start">
-                                      <div>
-                                        <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                        <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-                                      </div>
-                                      
-                                      <canvas></canvas>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div><br>
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <div class="row flex-column">
-                                  <div class="col-10 col-lg-4 col-lg-12  ">
-                                    <div class="card card-rounded">
-                                      <div class="card-body">
-                                        <div class="d-sm-flex justify-content-between align-items-start">
-                                          <div>
-                                           <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                           <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                          </div>
-                                          <canvas></canvas>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                       </div>
                     </div>
                   </div>
