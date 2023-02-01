@@ -24,3 +24,7 @@ Route::get('/', function() {
 Route::get('/login', function() {
     return view('admin.login');
 });
+
+Route::get('/mapel', function() {
+    return view('layout.mapel');
+});

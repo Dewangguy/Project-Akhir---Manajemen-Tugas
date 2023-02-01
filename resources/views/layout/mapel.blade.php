@@ -5,10 +5,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star Admin2 </title>
+  <title>Mata Pelajaran</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset('template/vendors/feather/feather.css')}}">
-<link rel="stylesheet" href="{{asset('template/vendors/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{asset('template/vendors/mdi/css/materialdesignicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/ti-icons/css/themify-icons.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/typicons/typicons.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/simple-line-icons/css/simple-line-icons.css')}}">
@@ -44,9 +44,6 @@
       <div class="navbar-menu-wrapper d-flex align-items-top"> 
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Dewangga Bintang N</span></h1>
-            <h3 class="welcome-sub-text">Your performance summary this week </h3>
-          </li>
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -267,7 +264,7 @@
           <li class="nav-item nav-category">Tugas</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-book-open"></i>
+              <i class="menu-icon mdi mdi-account-circle-outline"></i>
               <span class="menu-title">Daftar Tugas</span>
               <i class="menu-arrow"></i>
             </a>
@@ -292,17 +289,17 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/mapel"> Pendidikan Agama Islam </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/login"> Pendidikan Agama Islam </a></li>
               </ul>
             </div>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/mapel"> Bahasa Inggris </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/login"> Bahasa Inggris </a></li>
               </ul>
             </div>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/mapel"> Bahasa Indonesia </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/login"> Bahasa Indonesia </a></li>
               </ul>
             </div>
           </li>
@@ -329,53 +326,9 @@
                     </div> 
                     <tr>
                       <td>
-                      
-                      {{-- <div class="row">
-                        <div class="col-md-6 col-xl-3">
-                          <div class="">
-                            <div class="col-md-6 col-xl-3">
-                              <div class="card card-rounded">
-                                <div class="card-body">
-                                  <div class="d-sm-flex justify-content-between align-items-start">
-                                    <div>
-                                      <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                      <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                    </div>
-                                    <div></div>
-                                  </div>
-                                  <div>
-                                    <canvas></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <td>
-                                  <div class="">
-                                    <div class="row flex-grow">
-                                      <div class="col-md-6 col-xl-3">
-                                        <div class="card card-rounded">
-                                          <div class="card-body">
-                                            <div class="d-sm-flex justify-content-between align-items-start">
-                                              <div>
-                                               <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                               <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                              </div>
-                                              <div></div>
-                                            </div>
-                                            <div>
-                                              <canvas></canvas>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                              </td>
-                            </div>
-                          </div> --}}
-
                           <div class="row">
-                            <div class="col-md-6">
-                                <div class="card card-rounded">
+                            <div class="col-lg-11">
+                                <div class="card card-rounded bg-danger">
                                   <div class="card-body">
                                     <div class="d-sm-flex justify-content-between align-items-start">
                                       <div>
@@ -391,7 +344,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-lg-5">
                                 <div class="card card-rounded">
                                   <div class="card-body">
                                     <div class="d-sm-flex justify-content-between align-items-start">
@@ -402,7 +355,6 @@
                                       <div></div>
                                     </div>
                                     <div>
-                                      <canvas></canvas>
                                     </div>
                                   </div>
                                 </div>
