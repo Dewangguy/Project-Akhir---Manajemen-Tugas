@@ -253,65 +253,7 @@
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">
-              <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item nav-category">Tugas</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">Daftar Tugas</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/login"> Belum Selesai </a></li>
-              </ul>
-            </div>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/login"> Selesai </a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav-item nav-category">Daftar Kelas</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">Nama Mapel</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/login"> Pendidikan Agama Islam </a></li>
-              </ul>
-            </div>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/login"> Bahasa Inggris </a></li>
-              </ul>
-            </div>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/login"> Bahasa Indonesia </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item nav-category">help</li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-              <i class="menu-icon mdi mdi-file-document"></i>
-              <span class="menu-title">Documentation</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      @include('layout.partials.sidebar')
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -335,39 +277,52 @@
                                         <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
                                         <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
                                       </div>
-                                      <div></div>
+                                      <div>
+                                      </div>
                                     </div>
                                     <div>
                                       <canvas></canvas>
                                     </div>
                                   </div>
                                 </div>
+                              </div>
+                              
+                              
                             </div>
-
-                            <div class="col-lg-5">
-                                <div class="card card-rounded">
-                                  <div class="card-body">
-                                    <div class="d-sm-flex justify-content-between align-items-start">
-                                      <div>
-                                        <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                        <h5 class="card-subtitle card-subtitle-dash">Bahasa Inggris</h5>
-                                      </div>
-                                      <div></div>
-                                    </div>
-                                    <div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-
-                        </div>
-                        </td>
-                      </tr>
+                          </td>
+                        </tr>
+                      </div>
+                      
                     </div>
-                    
                   </div>
+                  <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-body">
+                            {{-- @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif --}}
+        
+                            
+                                <form method="POST" enctype="multipart/form-data">
+                                    @csrf  
+                                <div class="form-group">
+                                <label for=""><h3>Mengerjakan LKS</h3></label>
+                                <br>
+                                <label for=""><h5>Mengerjakan LKS bab 1-6</h5></label>
+                                <input class="form-control" type="text" placeholder="Submit your link" required name="link" id="link"><br>
+                                <input type="submit" value="Submit">
+                              </div>
+                            
+                            <div>
+                            </div>
+                        </form>
+                    
+                        </div>
+                    </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
