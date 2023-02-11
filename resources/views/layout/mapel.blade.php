@@ -263,17 +263,17 @@
           </li>
           <li class="nav-item nav-category">Tugas</li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" data-bs-toggle="collapse" href="#fery" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-account-circle-outline"></i>
               <span class="menu-title">Daftar Tugas</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="auth">
+            <div class="collapse" id="fery">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/login"> Belum Selesai </a></li>
               </ul>
             </div>
-            <div class="collapse" id="auth">
+            <div class="collapse" id="fery">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/login"> Selesai </a></li>
               </ul>
@@ -343,7 +343,7 @@
                                     </div>
                                     <table class="table table-responsive">
                                       <tr>
-                                        <td>{{ date('d M Y') }}</td>
+                                        <td><h4>{{ date('d M Y') }}</h4></td>
                                     </tr>
                                     </table>
                                   </div>
@@ -364,15 +364,31 @@
                                         <h4 class="card-title card-title-dash">Mengerjakan LKS Agama</h4>
                                         <h5 class="card-subtitle card-subtitle-dash">Halaman 6</h5>
                                       </div>
-                                      <div></div>
                                     </div>
                                     <div>
                                       <canvas></canvas>
                                     </div>
                                   </div>
                                 </div>
-                            </div>
+                            </div><br>
+                            <div class="col-lg-8">
+                              <div class="card card-rounded">
+                                <div class="card-body">
+                                  <div class="d-sm-flex justify-content-between align-items-start">
+                                    <div>
+                                      <h4 class="card-title card-title-dash">Mengerjakan LKS Agama</h4>
+                                      <h5 class="card-subtitle card-subtitle-dash">Halaman 6</h5>
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                  <div>
+                                    <canvas></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
