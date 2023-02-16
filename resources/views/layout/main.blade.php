@@ -26,63 +26,7 @@
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-        <div class="me-3">
-          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
-            <span class="icon-menu"></span>
-          </button>
-        </div>
-        <div>
-          <a class="navbar-brand brand-logo" href="http://www.smkn1-sby.sch.id/">
-            <img src="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png" alt="logo" />
-          </a>
-          <a class="navbar-brand brand-logo-mini" href="http://www.smkn1-sby.sch.id/">
-            <img src="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png" alt="logo" />
-          </a>
-        </div>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-top"> 
-        <ul class="navbar-nav">
-          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Dewangga Bintang N</span></h1>
-            <h3 class="welcome-sub-text">Your performance summary this week </h3>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <form class="search-form" action="#">
-              <i class="icon-search"></i>
-              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-            </form>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-              <i class="icon-mail icon-lg"></i>
-            </a>
-          </li>
-          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="https://cdn.discordapp.com/attachments/835568551435829279/1062989914779684884/latest.png" alt="Profile image"> </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <div class="dropdown-header text-center"
-                <img class="img-md rounded-circle" src="https://cdn.discordapp.com/attachments/835568551435829279/1062989914779684884/latest.png">
-                <p class="mb-1 mt-3 font-weight-semibold">Dewangga Bintang</p>
-                <p class="fw-light text-muted mb-0">dewangguy@gmail.com</p>
-              </div>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
-            </div>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
-          <span class="mdi mdi-menu"></span>
-        </button>
-      </div>
-    </nav>
+@include('layout.partials.navbar')
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
@@ -207,145 +151,63 @@
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">
-              <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item nav-category">Tugas</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#fery" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-book-open"></i>
-              <span class="menu-title">Daftar Tugas</span>
-              <i class=""></i>
-            </a>
-            <div class="collapse" id="fery">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/blmselesai"> Belum Selesai </a></li>
-              </ul>
-            </div>
-            <div class="collapse" id="fery">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/selesai"> Selesai </a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav-item nav-category">Daftar Kelas</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">Nama Mapel</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/mapel"> Pendidikan Agama Islam </a></li>
-              </ul>
-            </div>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/mapel"> Bahasa Inggris </a></li>
-              </ul>
-            </div>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/mapel"> Bahasa Indonesia </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item nav-category">help</li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-              <i class="menu-icon mdi mdi-file-document"></i>
-              <span class="menu-title">Documentation</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      @include('layout.partials.sidebar')
       <!-- partial -->
-      <div class="main-panel">
+      <divx class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-      <div class="col-sm-12">
-       <div class="home-tab">               
-         <div class="tab-content tab-content-basic">
-       <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
-         <div class="row">
-        <div class="col-sm-4">
-          </div>
-        </div> 
-            </div>
-            </div>
-            </div><br>
-              <div class="row">
-              <div class="col-md-6">
-                  <div class="card card-rounded">
-                    <div class="card-body">
-                       <div class="d-sm-flex justify-content-between align-items-start">
-                         <div>
-                      <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                      <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                         </div>
-                           <div></div>
-                    </div>
-              <div>
-                
-                <a class="btn btn-primary" href="#" role="button">Link</a>
-              <canvas></canvas>
-              </div>
-                </div>
-              </div>
-              </div>
+            <div class="col-sm-12">
+              <div class="home-tab">               
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+                    <div class="row">
+                      <div class="col-sm-12">
+                      </div>
+                    </div> 
+                    <tr>
+                      <td>
+                       <div class="row">
+                        <div class="col-lg-4">
+                          <div class="card" style="width: 20rem;">
+                            <img src="http://pendidikan.matamu.net/wp-content/uploads/2020/11/Pendidikan-Agama-Islam-Di-Indonesia.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                              <h5 class="card-title">Pendidikan Agama Islam</h5>
 
-            <div class="col-md-6">
-             <div class="card card-rounded">
-              <div class="card-body">
-              <div class="d-sm-flex justify-content-between align-items-start">
-               <div>
-            <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-            <h5 class="card-subtitle card-subtitle-dash">Bahasa Inggris</h5>
-             </div>
-              </div>
-               <div>
-                <a class="btn btn-primary" href="#" role="button">Link</a>
-             <canvas></canvas>
-        </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                              <a href="/mapel" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-4">
+                        <div class="card" style="width: 20rem;">
+                          <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2016/04/24/571c65856d920-fakta-fakta-tentang-bahasa-inggris_665_374.jpg" class="card-img-top" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">Bahsa Inggris</h5>
+                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card" style="width: 20rem;">
+                          <img src="https://assets-a1.kompasiana.com/items/album/2019/12/23/bahasa-indonesia-5e00d004d541df4d5717acd2.jpeg" class="card-img-top" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">Bahasa Indonesia</h5>
+                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>
+                        </div> 
+                      </td>
+                    </tr>
           </div>
         </div>
         </div>
       </div>
     </div>
   </div>
+      </div>
 </body>
 </html>
-        {{-- <div class="main-panel"> --}}
-          <div class="content-wrapper">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="home-tab">               
-                  <div class="tab-content tab-content-basic">
-                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
-                      <div class="row">
-                        <div class="col-sm-4">
-                        </div>
-                      </div> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {{-- </div> --}}
-          
-        
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">

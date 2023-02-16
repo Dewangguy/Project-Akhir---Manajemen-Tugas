@@ -28,3 +28,7 @@ Route::get('/login', function() {
 Route::get('/mapel', function() {
     return view('layout.mapel');
 });
+
+Route::get('/guru', function() {
+    return view('layout.guru.guru');
+});
