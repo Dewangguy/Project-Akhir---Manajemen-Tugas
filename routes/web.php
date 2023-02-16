@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('layout.main');
+    return view('layout.dashboard');
 });
 
 Route::get('/', function() {
@@ -29,6 +30,11 @@ Route::get('/mapel', function() {
     return view('layout.mapel');
 });
 
-Route::get('/guru', function() {
-    return view('layout.guru.guru');
+Route::get('/selesai', function() {
+    return view('DaftarTugas.selesai');
 });
+Route::get('/gorong', function() {
+    return view('DaftarTugas.belum');
+});
+
+Route::resource('/profile', ProfileController::class);
