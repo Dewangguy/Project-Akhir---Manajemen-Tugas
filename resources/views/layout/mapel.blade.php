@@ -22,64 +22,12 @@
   <link rel="stylesheet" href="{{asset('template/css/vertical-layout-light/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('template/images/favicon.png')}}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-        <div class="me-3">
-          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
-            <span class="icon-menu"></span>
-          </button>
-        </div>
-        <div>
-          <a class="navbar-brand brand-logo" href="http://www.smkn1-sby.sch.id/">
-            <img src="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png" alt="logo" />
-          </a>
-          <a class="https://cdn.discordapp.com/attachments/835568551435829279/1056785920629686282/logo-smkn-1-sby-removebg-preview.png" href="index.html">
-          </a>
-        </div>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-top"> 
-        <ul class="navbar-nav">
-          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-        </ul>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <form class="search-form" action="#">
-              <i class="icon-search"></i>
-              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-            </form>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-              <i class="icon-mail icon-lg"></i>
-              <span class="count"></span>
-            </a>
-          </li>
-          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="https://cdn.discordapp.com/attachments/835568551435829279/1062989914779684884/latest.png" alt="Profile image"> </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <div class="dropdown-header text-center"
-                <img class="img-md rounded-circle" src="https://cdn.discordapp.com/attachments/835568551435829279/1062989914779684884/latest.png">
-                <p class="mb-1 mt-3 font-weight-semibold">Dewangga Bintang</p>
-                <p class="fw-light text-muted mb-0">dewangguy@gmail.com</p>
-              </div>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
-            </div>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
-          <span class="mdi mdi-menu"></span>
-        </button>
-      </div>
-    </nav>
+    @include('layout.partials.navbar')
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
@@ -268,26 +216,15 @@
                     </div> 
                     <tr>
                       <td>
-                          <div class="row">
-                            <div class="col-lg-11">
-                                <div class="card card-rounded bg-danger">
-                                  <div class="card-body">
-                                    <div class="d-sm-flex justify-content-between align-items-start">
-                                      <div>
-                                        <h4 class="card-title card-title-dash">Mengerjakan LKS</h4>
-                                        <h5 class="card-subtitle card-subtitle-dash">Pendidikan Agama Islam</h5>
-                                      </div>
-                                      <div>
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <canvas></canvas>
-                                    </div>
-                                  </div>
-                                </div>
+                          <div class="col-md-10"></div>
+                            <div class="card mb-3" style="width:50% height:100px">
+                              <img src="https://www.slideegg.com/image/catalog/65629-Background%20Agama%20Islam.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                               </div>
-                              
-                              
+                            </div>                                                      
                             </div>
                           </td>
                         </tr>
@@ -296,32 +233,40 @@
                     </div>
                   </div>
                   <div class="col-md-9">
-                    <div class="card">
-                        <div class="card-body">
-                            {{-- @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                            @endif --}}
-        
+                    <div class="card text-bg-info">
+                        
+                               
+                          <div class="accordion" id="accordionExample">
                             
-                                <form method="POST" enctype="multipart/form-data">
-                                    @csrf  
-                                <div class="form-group">
-                                <label for=""><h3>Mengerjakan LKS</h3></label>
-                                <br>
-                                <label for=""><h5>Mengerjakan LKS bab 1-6</h5></label>
-                                <input class="form-control" type="text" placeholder="Submit your link" required name="link" id="link"><br>
-                                <input type="submit" value="Submit">
+                              <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                  <td>
+                                  <h4 class="text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Mengerjakan LKS bab 1-6
+                                  </h4>
+                                  </td>
+                                  <td>
+                                    <h6>12 Februari 2023</h6>
+                                  </td>
+                                </h2>
                               </div>
-                            
-                            <div>
-                            </div>
-                        </form>
-                    
-                        </div>
+                          
+                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Submit your link here" aria-label="Submit link" aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                             
+                         
                     </div>
                 </div>
+                <br>  
+
               </div>
               </div>
             </div>
@@ -358,6 +303,9 @@
   <script src="{{asset('template/js/jquery.cookie.js')}}" type="text/javascript"></script>
   <script src="{{asset('template/js/dashboard.js')}}"></script>
   <script src="{{asset('template/js/Chart.roundedBarCharts.js')}}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <!-- End custom js for this page-->
 </body>
 

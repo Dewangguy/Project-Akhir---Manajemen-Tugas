@@ -8,17 +8,17 @@
     </li>
   <li class="nav-item nav-category">Tugas</li>
   <li class="nav-item">
-    <a class="nav-link" data-bs-toggle="collapse" href="#fery" aria-expanded="false" aria-controls="auth">
+    <a class="nav-link" data-bs-toggle="collapse" href="assignment" aria-expanded="false" aria-controls="auth">
       <i class="menu-icon mdi mdi-book-open"></i>
       <span class="menu-title">Daftar Tugas</span>
       <i class=""></i>
     </a>
-    <div class="collapse" id="fery">
+    <div class="collapse" id="assignment">
       <ul class="nav flex-column sub-menu">
         <li class="nav-item"> <a class="nav-link" href="/blmselesai"> Belum Selesai </a></li>
       </ul>
     </div>
-    <div class="collapse" id="fery">
+    <div class="collapse" id="assignment">
       <ul class="nav flex-column sub-menu">
         <li class="nav-item"> <a class="nav-link" href="/selesai"> Selesai </a></li>
       </ul>

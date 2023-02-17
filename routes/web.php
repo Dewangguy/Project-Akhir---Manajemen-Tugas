@@ -28,3 +28,7 @@ Route::get('/login', function() {
 Route::get('/mapel', function() {
     return view('layout.mapel');
 });
+
+Route::get('/assignment', function() {
+    return view('layout.assignment');
+});
