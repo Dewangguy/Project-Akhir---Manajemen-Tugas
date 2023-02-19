@@ -23,6 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <link href="{{asset('/sb-admin/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
 
 </head>
@@ -44,6 +45,7 @@
                 
                 <!-- Topbar -->
                 @include('layout.partials.topbar')
+                @include('layout.editProfil')
                 <!-- End of Topbar -->
                 
                 <!-- Begin Page Content -->
@@ -95,7 +97,11 @@
     
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="{{asset('/sb-admin/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('/sb-admin/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('/sb-admin/js/demo/datatables-demo.js')}}"></script>
     @yield('js')
+    
 </body>
 
 </html>

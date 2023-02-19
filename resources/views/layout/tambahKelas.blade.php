@@ -9,16 +9,16 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <form method="post" action="{{route('kelas.store')}}">
                     <div class="form-group">
                         <label for="kelas" class="form-label">Nama Kelas</label>
                         <input type="text" class="form-control" name="nama_kelas" id="kelas">
                       </div>
                 </div>
                 <div class="modal-footer">
-                    <form method="post" action="{{route('logout')}}">
                       @csrf
-                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                      <button class="btn btn-primary" type="submit">Logout</button>
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                      <button class="btn btn-primary" type="submit">Simpan</button>
                     </form>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                 <div class="modal-footer">
                     <form method="post" action="{{route('logout')}}">
                       @csrf
-                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                      <button class="btn btn-primary" type="submit">Logout</button>
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                      <button class="btn btn-primary" type="submit">Simpan</button>
                     </form>
                 </div>
             </div>

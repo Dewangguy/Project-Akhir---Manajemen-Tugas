@@ -4,16 +4,37 @@
 <div class="accordion" id="accordionExample">
     <div class="card">
       <div class="card-header" id="headingOne">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Collapsible Group Item #1
+          <h2 class="mb-0">
+            <button class="btn btn-block text-left text-dark" type="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="row">
+                    <div class="col-10">
+                        <span class="mr-3" style="font-size: 38px;"><i class="fas fa-file-alt"></i></span><span></span> Tugas Mengerjakan LKS bab 1-6                       
+                    </div>
+                    <div class="col pt-2">
+                         <li class="nav-item dropdown no-arrow d-flex">
+                            <span class="mt-2">Due 22, Feb</span><a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"
+                                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fas fa-ellipsis-v"></i>
+                              </a>
+                              <!-- Dropdown - User Information -->
+                              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                  aria-labelledby="userDropdown">
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahkelas">
+                                      Edit
+                                  </a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#joinkelas">
+                                      Hapus
+                                  </a>
+                              </div>
+                            </li>
+                    </div>
+                </div>
           </button>
         </h2>
       </div>
-  
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+           Posted 20 Februari 
         </div>
       </div>
     </div>
