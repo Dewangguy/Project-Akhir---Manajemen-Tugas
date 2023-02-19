@@ -37,4 +37,8 @@ Route::get('/gorong', function() {
     return view('DaftarTugas.belum');
 });
 
+Route::get('/history', function() {
+    return view('DaftarTugas.RekapanTugas.history');
+});
+
 Route::resource('/profile', ProfileController::class);

@@ -7,7 +7,7 @@
       </a>
     </li>
 
-  {{-- <li class="nav-item nav-category">Tugas</li>
+  <li class="nav-item nav-category">Tugas</li>
   <li class="nav-item">
     <a class="nav-link" data-bs-toggle="collapse" href="#fery" aria-expanded="false" aria-controls="auth">
       <i class="menu-icon mdi mdi-book-open"></i>
@@ -24,26 +24,7 @@
         <li class="nav-item"> <a class="nav-link" href="/selesai"> Selesai </a></li>
       </ul>
     </div>
-  </li> --}}
-  <li class="nav-item nav-category">Tugas</li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#angguy" aria-expanded="false" aria-controls="auth">
-        <i class="menu-icon mdi mdi-book-open"></i>
-        <span class="menu-title">Daftar Tugas</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="angguy">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/gorong"> Belum Selesai </a></li>
-        </ul>
-      </div>
-      <div class="collapse" id="angguy">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/selesai">Selesai </a></li>
-        </ul>
-      </div>
-    </li>
-
+  </li>
     <li class="nav-item nav-category">Daftar Kelas</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
