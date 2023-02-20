@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Tugas extends Model
 {
     use HasFactory;
+    protected $table = 'tugas';
     protected $guarded = ['id'];
+
+    public function kelas (){
+        return $this->belongsTo(Kelas::class);
+    }
 }

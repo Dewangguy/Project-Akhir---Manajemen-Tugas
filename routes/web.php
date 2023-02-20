@@ -22,9 +22,7 @@ Route::get('/', [DashboardController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/mapel', function(){return view('layout.mapel', [
-    'kelas' => kelas::all()
-]);});
+Route::get('/mapel', []);
 Route::get('/assignment', function(){return view('layout.assignment', [
     'kelas' => Kelas::all()
 ]);});
