@@ -4,7 +4,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-center">
-                   Submited 
+                   <h2><span class="text-black fw-bold">Submited</span></h2>
                 </div>
                 <div class="card-body text-center">
                                   <table class="table table-responsive table-striped">

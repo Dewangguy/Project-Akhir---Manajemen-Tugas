@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kelas;
+use App\Models\Tugas;
 use Illuminate\Http\Request;
 
 class TugasController extends Controller
@@ -15,7 +17,8 @@ class TugasController extends Controller
 
     public function index()
     {
-        return view();
+        $kelas = Kelas::all();
+        return view('layout.assignment',compact("kelas"));
     }
 
     /**
@@ -36,8 +39,18 @@ class TugasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fery = $request->validate([
+            "nama_tugas" => "required",
+            "deskripsi_tugas" => "required",
+            "due_date" => "required",
+            "kelas_id" => "required",
+        ]);
+
+        Tugas::create($fery);
+
+        return redirect('/mapel/' . $request->kelas_id);
     }
+
 
     /**
      * Display the specified resource.

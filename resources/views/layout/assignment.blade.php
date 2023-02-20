@@ -5,6 +5,8 @@
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
+                <form action="{{route('assignment.store')}}" method="post">
+                  @csrf
                   <div class="form-group">
                     <label for="judul" class="form-label">Judul Tugas</label>
                     <input type="text" class="form-control" name="nama_tugas" id="judul">
@@ -25,11 +27,12 @@
                     </div>
                     <div class="col">
                       <label for="tanggal" class="form-label">Due Date</label>
-                        <input class="form-control" type="date" name="tanggal" id="tanggal">
+                        <input class="form-control" type="date" name="due_date" id="tanggal">
                     </div>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-dark float-end" value="submit">Submit</button>
+                  <button type="submit" class="btn btn-dark float-end">Submit</button>
+                </form>
                   </div>
               </div>
           </div>

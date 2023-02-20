@@ -38,12 +38,12 @@
 
     
   <!-- Divider -->
-  <hr class="sidebar-divider">
+  {{-- <hr class="sidebar-divider"> --}}
 
   <!-- Heading -->
-  <div class="sidebar-heading">
+  {{-- <div class="sidebar-heading">
       Daftar Tugas
-  </div>
+  </div> --}}
 
   <!-- Nav Item - Pages Collapse Menu -->
   {{-- <li class="nav-item">

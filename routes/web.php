@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AssigmentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TugasController;
@@ -24,7 +23,7 @@ Route::middleware(['auth'])->group( function(){
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     // Route::get('/mapel', function(){return view('layout.mapel');});
     Route::get('/mapel/{id}', [DashboardController::class, 'show']);
-    Route::resource('/assignment', AssigmentController::class);
+    Route::resource('/assignment', TugasController::class);
     Route::get('/classwork', function(){return view('layout.classwork');});
     Route::get('/nilai', function(){return view('layout.nilai');});
     Route::post('/tambahkelas', [DashboardController::class, 'store'])->name('kelas.store');
