@@ -11,7 +11,7 @@
               <div class="row">
                 <div class="col-lg-10">
               <h5 class="card-title">{{$k->nama_kelas}}</h5>
-              <a href="/mapel" class="btn btn-primary">Go somewhere</a></div>
+              <a href="/mapel/{{$k->id}}" class="btn btn-primary">Go somewhere</a></div>
               <div class="col-lg-2">
                 <li class="nav-item dropdown no-arrow d-flex">
                  <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"

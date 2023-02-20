@@ -36,11 +36,6 @@
           <span>Nilai</span></a>
       </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="/mapel">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Mapel</span></a>
-      </li>
     
   <!-- Divider -->
   {{-- <hr class="sidebar-divider"> --}}

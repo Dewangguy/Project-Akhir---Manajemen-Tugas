@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kelas;
+use App\Models\Tugas;
 use App\Models\User;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 
+
 class DashboardController extends Controller
 {
+
     public function index(){
         $kelas=Kelas::all();
         return view('layout.dashboard', compact('kelas'));
@@ -32,7 +35,7 @@ class DashboardController extends Controller
         $number = rand(1,5);
 
         if($number == 1){
-            $validate['foto_kelas']="https://png.pngtree.com/thumb_back/fw800/background/20220215/pngtree-cartoon-education-banner-background-of-blue-homework-tutorial-class-image_926458.jpg";
+            $validate['foto_kelas']="https://media.istockphoto.com/id/907864634/vector/school-classroom-interior.jpg?s=612x612&w=0&k=20&c=58DszHBLZU64pm1L9p6YpoupXGXbtWTDCzRG8PMIpWQ=";
         }
 
         if($number == 2){
@@ -95,6 +98,12 @@ class DashboardController extends Controller
 
         throw ValidationException::withMessages([
             "old_pass" => "Password lama tidak cocok"
+        ]);
+    }
+
+    public function show($id) {
+        return view('layout.mapel', [
+            'kelas' => Kelas::find($id)
         ]);
     }
 }

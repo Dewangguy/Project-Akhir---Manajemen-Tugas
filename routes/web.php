@@ -4,7 +4,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TugasController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Kelas;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,19 @@ use App\Models\Kelas;
 |
 */
 
-
-Route::get('/', [DashboardController::class, 'index']);
+Route::middleware(['auth'])->group( function(){
+    Route::get('/', [DashboardController::class, 'index']);
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    // Route::get('/mapel', function(){return view('layout.mapel');});
+    Route::get('/mapel/{id}', [DashboardController::class, 'show']);
+    Route::resource('/assignment', TugasController::class);
+    Route::get('/classwork', function(){return view('layout.classwork');});
+    Route::get('/nilai', function(){return view('layout.nilai');});
+    Route::post('/tambahkelas', [DashboardController::class, 'store'])->name('kelas.store');
+    Route::post('/kelas/{id}/delete', [DashboardController::class, 'delete'])->name('kelas.delete');
+    Route::post('/profil/{id}/update', [DashboardController::class, 'editprofil'])->name('profile.update');
+    Route::post('/pass/update', [DashboardController::class, 'ChangePass'])->name('pass.update');
+});
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

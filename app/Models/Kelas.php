@@ -13,7 +13,7 @@ class Kelas extends Model
 
     protected $guarded=['id'];
 
-    public function tugas(){
+    public function tugas() {
         return $this->hasMany(Tugas::class);
     }
 }

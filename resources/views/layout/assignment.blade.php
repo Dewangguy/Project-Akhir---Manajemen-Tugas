@@ -5,7 +5,7 @@
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
-                <form action="/assignment" method="post">
+                <form action="{{route('assignment.store')}}" method="post">
                   @csrf
                   <div class="form-group">
                     <label for="judul" class="form-label">Judul Tugas</label>
@@ -21,19 +21,17 @@
                         <select class="form-control" name="kelas_id" id="kelas">
                           <option selected>Pilih Kelas</option>
                           @foreach ($kelas as $k)
-
                           <option value="{{$k->id}}">{{$k->nama_kelas}}</option>
-                              
                           @endforeach
                         </select>
                     </div>
                     <div class="col">
                       <label for="tanggal" class="form-label">Due Date</label>
-                        <input class="form-control" type="date" name="tanggal" id="tanggal">
+                        <input class="form-control" type="date" name="due_date" id="tanggal">
                     </div>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-dark float-end" value="submit">Submit</button>
+                  <button type="submit" class="btn btn-dark float-end">Submit</button>
                 </form>
                   </div>
               </div>
