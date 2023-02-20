@@ -23,27 +23,8 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/mapel', function(){return view('layout.mapel');});
 Route::get('/assignment', function(){return view('layout.assignment');});
 Route::get('/classwork', function(){return view('layout.classwork');});
-Route::get('/', function() {
-    return view('admin.login');
-});
-
-Route::get('/login', function() {
-    return view('admin.login');
-});
-
-Route::get('/mapel', function() {
-    return view('layout.mapel');
-});
-
-Route::get('/selesai', function() {
-    return view('DaftarTugas.selesai');
-});
-Route::get('/gorong', function() {
-    return view('DaftarTugas.belum');
-});
-
-Route::get('/history', function() {
-    return view('DaftarTugas.RekapanTugas.history');
-});
-
-Route::resource('/profile', ProfileController::class);
+Route::get('/nilai', function(){return view('layout.nilai');});
+Route::post('/tambahkelas', [DashboardController::class, 'store'])->name('kelas.store');
+Route::post('/kelas/{id}/delete', [DashboardController::class, 'delete'])->name('kelas.delete');
+Route::post('/profil/{id}/update', [DashboardController::class, 'editprofil'])->name('profile.update');
+Route::post('/pass/update', [DashboardController::class, 'ChangePass'])->name('pass.update');

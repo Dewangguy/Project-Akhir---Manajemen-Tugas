@@ -17,6 +17,7 @@ class CreateKelasTable extends Migration
             $table->id();
             $table->string('nama_kelas');
             $table->string('code_kelas');
+            $table->string('foto_kelas');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

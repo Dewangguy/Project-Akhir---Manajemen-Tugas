@@ -1,61 +1,43 @@
 @extends('layout.main')
 @section('content')
       @include('layout.tambahKelas')
+      
      <div class="row">
-                        <div class="col-lg-4">
-                          <div class="card mb-4" style="width: 20rem;">
-                            <img src="http://pendidikan.matamu.net/wp-content/uploads/2020/11/Pendidikan-Agama-Islam-Di-Indonesia.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                              <h5 class="card-title">Pendidikan Agama Islam</h5>
-                              <a href="/mapel" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-
-                        </div>
-                        <div class="col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                          <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2016/04/24/571c65856d920-fakta-fakta-tentang-bahasa-inggris_665_374.jpg" class="card-img-top" alt="">
-                          <div class="card-body">
-                            <h5 class="card-title">Bahasa Inggris</h5>
-                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                          <img src="https://assets-a1.kompasiana.com/items/album/2019/12/23/bahasa-indonesia-5e00d004d541df4d5717acd2.jpeg" class="card-img-top" alt="">
-                          <div class="card-body">
-                            <h5 class="card-title">Bahasa Indonesia</h5>
-                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                          <img src="https://assets-a1.kompasiana.com/items/album/2019/12/23/bahasa-indonesia-5e00d004d541df4d5717acd2.jpeg" class="card-img-top" alt="">
-                          <div class="card-body">
-                            <h5 class="card-title">Bahasa Indonesia</h5>
-                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                          <img src="https://assets-a1.kompasiana.com/items/album/2019/12/23/bahasa-indonesia-5e00d004d541df4d5717acd2.jpeg" class="card-img-top" alt="">
-                          <div class="card-body">
-                            <h5 class="card-title">Bahasa Indonesia</h5>
-                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="card mb-2" style="width: 20rem;">
-                          <img src="https://assets-a1.kompasiana.com/items/album/2019/12/23/bahasa-indonesia-5e00d004d541df4d5717acd2.jpeg" class="card-img-top" alt="">
-                          <div class="card-body">
-                            <h5 class="card-title">Bahasa Indonesia</h5>
-                            <a href="/mapel" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div> 
+      @foreach($kelas as $k)
+        <div class="col-lg-4">
+          <div class="card mb-4" style="width: 20rem;">
+            <img style="max-height: 200px; object-fit: cover;" src="{{$k->foto_kelas}}" class="card-img-top" alt="">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-10">
+              <h5 class="card-title">{{$k->nama_kelas}}</h5>
+              <a href="/mapel" class="btn btn-primary">Go somewhere</a></div>
+              <div class="col-lg-2">
+                <li class="nav-item dropdown no-arrow d-flex">
+                 <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="fas fa-ellipsis-v"></i>
+                   </a>
+                   <!-- Dropdown - User Information -->
+                   <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                       aria-labelledby="userDropdown">
+                       {{-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahkelas">
+                           Edit
+                       </a> --}}
+                       <form action="{{route('kelas.delete', $k->id)}}" method="post">
+                        @csrf
+                         <button class="dropdown-item" type="submit">
+                             Hapus
+                         </button>
+                       </form>
+                   </div>
+                 </li>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div> 
+        @endforeach
+     </div>
 @endsection
