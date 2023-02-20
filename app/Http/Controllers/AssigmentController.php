@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 
-class TugasController extends Controller
+class AssigmentController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function index()
     {
-        return view();
+        $kelas = Kelas::all();
+        return view('layout.assignment' ,compact('kelas'));
     }
 
     /**

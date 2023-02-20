@@ -18,8 +18,9 @@
                       <label for="kelas" class="form-label">Kelas</label>
                         <select class="form-control" name="kelas_id" id="kelas">
                           <option selected>Pilih Kelas</option>
-                          <option value="1">12 RPL 1</option>
-                          <option value="2">12 RPL 2</option>
+                          @foreach ($kelas as $k)
+                          <option value="{{$k->id}}">{{$k->nama_kelas}}</option>
+                          @endforeach
                         </select>
                     </div>
                     <div class="col">

@@ -4,23 +4,25 @@
 <div class="card mb-3" >
     <img style="max-height: 200px; object-fit: cover;" src="https://img.freepik.com/free-vector/abstract-low-poly-orange-yellow-background_1017-32111.jpg?w=2000" class="card-img-top" alt="...">
     <div class="card-body">
-      <h4 class="card-title text-dark">Pendidikan Agama Islam</h4>
-      <p class="card-text">Kelas Pembelajaran Agama Islam Kelas 12 RPL 1</p>
-      <h3 class="card-text text-dark">(random code)</h3>
+      <h4 class="card-title text-dark">{{$kelas->nama_kelas}}</h4>
+      <h3 class="card-text text-dark">{{$kelas->code_kelas}}</h3>
     </div>
   </div>
   <div class="accordion" id="accordionExample">
     <div class="card">
       <div class="card-header" id="headingOne">
           <h2 class="mb-0">
-            <button class="btn btn-block text-left text-dark" type="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            @foreach ($kelas->tugas as $k)
+            <button class="btn btn-block text-left text-dark" type="" data-toggle="collapse" data-target="#collapseOne-{{$loop->iteration}}" aria-expanded="true" aria-controls="collapseOne">
                 <div class="row">
                     <div class="col-10">
-                        <span class="mr-3" style="font-size: 38px;"><i class="fas fa-file-alt"></i></span><span></span> Tugas Mengerjakan LKS bab 1-6                       
+                          
+                      
+                        <span class="mr-3" style="font-size: 38px;"><i class="fas fa-file-alt"></i></span><span></span> {{$k->nama_tugas}}
                     </div>
                     <div class="col pt-2">
                          <li class="nav-item dropdown no-arrow d-flex">
-                            <span class="mt-2">Due 22, Feb</span><a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"
+                            <span class="mt-2">{{$k->due_date}}</span><a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"
                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fas fa-ellipsis-v"></i>
                               </a>
@@ -36,15 +38,17 @@
                               </div>
                             </li>
                     </div>
+                  </div>
+                </button>
+                <div id="collapseOne-{{$loop->iteration}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                     Posted 20 Februari 
+                  </div>
                 </div>
-          </button>
+                @endforeach
         </h2>
       </div>
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body">
-           Posted 20 Februari 
-        </div>
-      </div>
+      
     </div>
     <div class="card">
       <div class="card-header" id="headingTwo">
