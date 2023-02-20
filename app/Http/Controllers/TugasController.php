@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tugas;
 use Illuminate\Http\Request;
 
 class TugasController extends Controller
@@ -35,6 +36,24 @@ class TugasController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function store_assignment(Request $request){
+        $request->validate([
+            'nama_tugas' => 'required',
+            'deskripsi_tugas' => 'required',
+            'kelas_id' => 'required',
+            'tanggal' => 'required'
+        ]);
+
+        Tugas::create([
+            'nama_tugas' => $request->nama_tugas,
+            'deskripsi_tugas' => $request->deskripsi_tugas,
+            'due_date' => $request->tanggal,
+            'kelas_id' => $request->kelas_id
+        ]);
+
+    return back();
     }
 
     /**

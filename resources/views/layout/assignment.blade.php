@@ -5,6 +5,8 @@
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
+                <form action="/assignment" method="post">
+                  @csrf
                   <div class="form-group">
                     <label for="judul" class="form-label">Judul Tugas</label>
                     <input type="text" class="form-control" name="nama_tugas" id="judul">
@@ -18,8 +20,11 @@
                       <label for="kelas" class="form-label">Kelas</label>
                         <select class="form-control" name="kelas_id" id="kelas">
                           <option selected>Pilih Kelas</option>
-                          <option value="1">12 RPL 1</option>
-                          <option value="2">12 RPL 2</option>
+                          @foreach ($kelas as $k)
+
+                          <option value="{{$k->id}}">{{$k->nama_kelas}}</option>
+                              
+                          @endforeach
                         </select>
                     </div>
                     <div class="col">
@@ -29,6 +34,7 @@
                   </div>
                   <br>
                   <button type="submit" class="btn btn-dark float-end" value="submit">Submit</button>
+                </form>
                   </div>
               </div>
           </div>
