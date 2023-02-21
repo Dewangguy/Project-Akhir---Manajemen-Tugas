@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('user_profile')->nullable();
+            $table->unsignedBigInteger('code_kelas')->references
             $table->rememberToken();
             $table->timestamps();
         });
