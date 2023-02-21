@@ -103,7 +103,7 @@ class DashboardController extends Controller
 
     public function show($id) {
         return view('layout.mapel', [
-            'kelas' => Kelas::find($id)
+            'k' => Kelas::find($id)
         ]);
     }
 }

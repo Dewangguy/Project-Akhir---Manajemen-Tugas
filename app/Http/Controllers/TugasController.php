@@ -96,4 +96,22 @@ class TugasController extends Controller
     {
         //
     }
+
+    public function store_assignment(Request $request){
+        $request->validate([
+            'nama_tugas' => 'required',
+            'deskripsi_tugas' => 'required',
+            'kelas_id' => 'required',
+            'due_date' => 'required'
+        ]);
+
+        Tugas::create([
+            'nama_tugas' => $request->nama_tugas,
+            'deskripsi_tugas' => $request->deskripsi_tugas,
+            'due_date' => $request->due_date,
+            'kelas_id' => $request->kelas_id
+        ]);
+
+    return redirect('/mapel/' . $request->kelas_id);
+    }
 }

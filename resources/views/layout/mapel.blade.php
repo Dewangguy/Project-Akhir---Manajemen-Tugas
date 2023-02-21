@@ -2,6 +2,7 @@
 @section('content')
 
 
+
 <div class="card mb-3" >
     <img style="max-height: 200px; object-fit: cover;" src="https://img.freepik.com/free-vector/abstract-low-poly-orange-yellow-background_1017-32111.jpg?w=2000" class="card-img-top" alt="...">
     <div class="card-body">

@@ -5,7 +5,7 @@
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
-                <form action="{{route('assignment.store')}}" method="post">
+                <form action="/assignment" method="post">
                   @csrf
                   <div class="form-group">
                     <label for="judul" class="form-label">Judul Tugas</label>
