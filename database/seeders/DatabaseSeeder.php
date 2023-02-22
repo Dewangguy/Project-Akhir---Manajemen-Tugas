@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create(['nisn/nip'=>'0044772182', 'name'=>'angga', 'password'=>bcrypt('12345')]);
+        User::create(['nisn/nip'=>'0042266343', 'name'=>'fery', 'password'=>bcrypt('12345')]);
     }
 }

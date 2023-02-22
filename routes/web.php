@@ -31,6 +31,8 @@ Route::middleware(['auth'])->group( function(){
     Route::post('/profil/{id}/update', [DashboardController::class, 'editprofil'])->name('profile.update');
     Route::post('/pass/update', [DashboardController::class, 'ChangePass'])->name('pass.update');
     Route::post('/assignment/{id}', [TugasController::class, 'class_assignment'])->name('assignment_class_store');
+    Route::post('/joinkelas', [DashboardController::class, 'joinkelas'])->name('kelas.join');
+
 });
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');

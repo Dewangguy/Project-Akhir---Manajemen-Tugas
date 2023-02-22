@@ -3,7 +3,16 @@
 
 
 <div class="card mb-3" >
-    <img style="max-height: 200px; object-fit: cover;" src="https://img.freepik.com/free-vector/abstract-low-poly-orange-yellow-background_1017-32111.jpg?w=2000" class="card-img-top" alt="...">
+  <ul class="nav justify-content-center mb-2 mt-2">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Appointment</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/classwork">Classwork</a>
+    </li>
+  </ul>
+    <img style="max-height: 200px; object-fit: cover;" src="{{$kelas->foto_kelas}}" class="card-img-top" alt="...">
+    
     <div class="row">
       <div class="col-11">
         <div class="card-body">
@@ -61,7 +70,12 @@
                 </button>
                 <div id="collapseOne-{{$loop->iteration}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                   <div class="card-body">
-                     Posted 20 Februari 
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Link" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Submit</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 @endforeach
