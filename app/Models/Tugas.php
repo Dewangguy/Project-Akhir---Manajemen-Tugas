@@ -15,4 +15,8 @@ class Tugas extends Model
     public function kelas() {
         return $this->hasMany(Kelas::class);
     }
+
+    public function user() {
+        return $this->belongsToMany(User::class,'tugasuser');
+    }
 }

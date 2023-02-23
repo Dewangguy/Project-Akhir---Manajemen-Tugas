@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kelas;
 use App\Models\Tugas;
+use App\Models\TugasUser;
 use Illuminate\Http\Request;
 
 class TugasController extends Controller
@@ -48,7 +49,7 @@ class TugasController extends Controller
 
         Tugas::create($fery);
 
-        return redirect('/mapel/' . $request->kelas_id);
+        return redirect('/kelas/' . $request->kelas_id);
     }
 
     public function class_assignment(Request $request,$id){
@@ -118,21 +119,25 @@ class TugasController extends Controller
         //
     }
 
-    public function store_assignment(Request $request){
-        $request->validate([
-            'nama_tugas' => 'required',
-            'deskripsi_tugas' => 'required',
-            'kelas_id' => 'required',
-            'due_date' => 'required'
+    public function kirimtugas(Request $request)
+    {
+        $validation = $request->validate([
+            'link' => 'required'
         ]);
-
-        Tugas::create([
-            'nama_tugas' => $request->nama_tugas,
-            'deskripsi_tugas' => $request->deskripsi_tugas,
-            'due_date' => $request->due_date,
-            'kelas_id' => $request->kelas_id
-        ]);
-
-    return redirect('/mapel/' . $request->kelas_id);
+        $validation['user_id']=auth()->user()->id;
+        $validation['tugas_id']=$request->tugas;
+        TugasUser::create($validation);
+        
+        return back();
     }
+
+    public function classwork($id)
+    {
+        return view('layout.classwork', [
+            'kelas' => Kelas::find($id)
+        ]);
+
+    }
+
+    
 }

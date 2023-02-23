@@ -35,14 +35,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
+                    <form method="post" action="{{route('kelas.join')}}">
+                    @csrf
+                      <div class="form-group">
                         <label for="kode" class="form-label">Kode Kelas</label>
-                        <input type="text" class="form-control" name="kode_kelas" id="kode">
+                        <input type="text" class="form-control" name="code" id="kode">
                       </div>
                 </div>
                 <div class="modal-footer">
-                    <form method="post" action="{{route('logout')}}">
-                      @csrf
+                    
                       <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                       <button class="btn btn-primary" type="submit">Simpan</button>
                     </form>

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kelas;
-use App\Models\Tugas;
+use App\Models\ClassUser;
 use App\Models\User;
+use App\Models\Tugas;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
@@ -16,8 +17,9 @@ class DashboardController extends Controller
 {
 
     public function index(){
-        $kelas=Kelas::all();
-        return view('layout.dashboard', compact('kelas'));
+        $kelas=auth()->user()->kelas;
+        $creation=Kelas::where('user_id', auth()->user()->id)->get();
+        return view('layout.dashboard', compact('kelas', 'creation'));
     }
 
     public function store(Request $request){
@@ -106,6 +108,21 @@ class DashboardController extends Controller
         return view('layout.mapel', [
             'k' => Kelas::find($id)
         ]);
+    } 
+
+    public function joinkelas(Request $request){
+        $code=$request->code;
+        $kelas=Kelas::where('code_kelas',$code)->get()->first();
+        if($kelas != null && $kelas->user_id != auth()->user()->id){
+            
+        if (ClassUser::where([['user_id', auth()->user()->id],['kelas_id', $kelas->id]])->get()->first()==null) {
+                ClassUser::create([
+                    'user_id'=>auth()->user()->id,
+                    'kelas_id'=>$kelas->id,
+                ]);
+            }
+        }
+        return back();
     }
     public function hapus($id){
         $k = Tugas::find($id)->delete();
