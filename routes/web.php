@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Auth;
 Route::middleware(['auth'])->group( function(){
     Route::get('/', [DashboardController::class, 'index']);
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-    // Route::get('/mapel', function(){return view('layout.mapel');});
     Route::get('/kelas/{id}', [DashboardController::class, 'show'])->name('kelas.show');
     Route::resource('/assignment', TugasController::class);
     Route::get('/classwork/{id}', [TugasController::class, 'classwork'])->name('class.work');
@@ -30,7 +29,6 @@ Route::middleware(['auth'])->group( function(){
     Route::post('/kelas/{id}/delete', [DashboardController::class, 'delete'])->name('kelas.delete');
     Route::post('/profil/{id}/update', [DashboardController::class, 'editprofil'])->name('profile.update');
     Route::post('/pass/update', [DashboardController::class, 'ChangePass'])->name('pass.update');
-    Route::post('/assignment/{id}', [TugasController::class, 'class_assignment'])->name('assignment_class_store');
     Route::post('/joinkelas', [DashboardController::class, 'joinkelas'])->name('kelas.join');
     Route::post('/submitlink', [TugasController::class, 'kirimtugas'])->name('kirim.tugas');
 

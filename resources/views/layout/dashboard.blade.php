@@ -10,7 +10,7 @@
               <div class="row">
                 <div class="col-lg-10">
               <h5 class="card-title">{{$k->nama_kelas}}</h5>
-              <a href="/mapel/{{$k->id}}" class="btn btn-primary">Masuk</a></div>
+              <a href="{{route('kelas.show', $k->id)}}" class="btn btn-primary">Masuk</a></div>
               <div class="col-lg-2">
                 <li class="nav-item dropdown no-arrow d-flex">
                  <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"
@@ -46,7 +46,7 @@
               <div class="row">
                 <div class="col-lg-10">
               <h5 class="card-title">{{$k->nama_kelas}}</h5>
-              <a href="/kelas/{{$k->id}}" class="btn btn-primary">Masuk</a></div>
+              <a href="{{route('kelas.show', $k->id)}}" class="btn btn-primary">Masuk</a></div>
               <div class="col-lg-2">
                 <li class="nav-item dropdown no-arrow d-flex">
                  <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button"

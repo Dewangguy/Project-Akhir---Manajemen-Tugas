@@ -5,7 +5,7 @@
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
-                <form action="/assignment/{{$kelas->id}}" method="post">
+                <form action="{{route('assignment.store')}}" method="post">
                   @csrf
                   <div class="form-group">
                     <label for="judul" class="form-label">Judul Tugas</label>
@@ -15,15 +15,10 @@
                     <label for="deskripsi" class="form-label">Deskripsi Tugas</label>
                     <textarea name="deskripsi_tugas" id="deskripsi" class="form-control" cols="30" rows="10"></textarea>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                    </div>
-                    <div class="col">
                       <label for="tanggal" class="form-label">Due Date</label>
                         <input class="form-control" type="date" name="due_date" id="tanggal">
-                    </div>
-                  </div>
                   <br>
+                  <input type="hidden" name="kelas_id" value="{{$id}}">
                   <button type="submit" class="btn btn-dark float-end">Submit</button>
                 </form>
                   </div>

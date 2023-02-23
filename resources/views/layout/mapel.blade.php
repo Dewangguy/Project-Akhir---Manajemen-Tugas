@@ -30,7 +30,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
             aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="/assignment/{{$kelas->id}}">
+            <a class="dropdown-item" href="{{route('assignment.show',$kelas->id)}}">
                 Tambah Tugas
             </a>
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#joinkelas">
