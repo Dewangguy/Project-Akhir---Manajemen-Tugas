@@ -13,6 +13,6 @@ class Tugas extends Model
     protected $guarded = ['id'];
 
     public function kelas() {
-        return $this->belongsTo(Kelas::class);
+        return $this->hasMany(Kelas::class);
     }
 }

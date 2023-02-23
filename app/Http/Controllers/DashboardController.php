@@ -102,8 +102,13 @@ class DashboardController extends Controller
     }
 
     public function show($id) {
+        // $k = Kelas::all();
         return view('layout.mapel', [
             'k' => Kelas::find($id)
         ]);
+    }
+    public function hapus($id){
+        $k = Tugas::find($id)->delete();
+        return redirect()->back();
     }
 }

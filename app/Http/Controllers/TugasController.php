@@ -51,6 +51,20 @@ class TugasController extends Controller
         return redirect('/mapel/' . $request->kelas_id);
     }
 
+    public function class_assignment(Request $request,$id){
+        $fery = $request->validate([
+            "nama_tugas" => "required",
+            "deskripsi_tugas" => "required",
+            "due_date" => "required",
+        ]);
+
+        $fery['kelas_id'] = $id;
+
+        Tugas::create($fery);
+
+        return redirect('/mapel/' . $id);
+    }
+
 
     /**
      * Display the specified resource.
@@ -60,7 +74,8 @@ class TugasController extends Controller
      */
     public function show($id)
     {
-        //
+        $kelas = Kelas::find($id);
+        return view('layout.assignment_class', compact('kelas'));
     }
 
     /**
@@ -71,7 +86,7 @@ class TugasController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -83,7 +98,13 @@ class TugasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+            $tugas = Tugas::find($id);
+            $tugas->nama_tugas = $request->nama_tugas;
+            $tugas->deskripsi_tugas = $request->deskripsi_tugas;
+            $tugas->due_date = $request->due_date;
+            $tugas->kelas_id = $request->kelas_id;
+            $tugas->Update();
+            return redirect()->back();
     }
 
     /**
