@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-7">
+        <div class="col-md-11">
             <div class="card">
                 <div class="card-header">Daftar Murid</div>
                 <div class="card-body">
@@ -13,6 +13,7 @@
                                 <tr>
                                     <th>Profile</th>
                                     <th>Nama</th>
+                                    <th>Link Tugas</th>
                                     <th>Nilai</th>
                                     <th>Option</th>
                                 </tr>
@@ -21,6 +22,7 @@
                                 <tr>
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
+                                    <td>youtube.com</td>
                                     <form action="" method="post">
                                         @csrf
                                         <td><input class="form-control" placeholder="0/100" min="0" max="100" type="number" name="nilai" id="nilai"></td>

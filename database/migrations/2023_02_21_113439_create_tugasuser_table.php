@@ -19,6 +19,7 @@ class CreateTugasuserTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('tugas_id');
             $table->foreign('tugas_id')->references('id')->on('tugas');
+            $table->string('link');
             $table->timestamps();
         });
     }

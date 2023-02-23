@@ -106,7 +106,7 @@ class DashboardController extends Controller
         return view('layout.mapel', [
             'kelas' => Kelas::find($id)
         ]);
-    }
+    } 
 
     public function joinkelas(Request $request){
         $code=$request->code;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kelas;
 use App\Models\Tugas;
+use App\Models\TugasUser;
 use Illuminate\Http\Request;
 
 class TugasController extends Controller
@@ -111,4 +112,26 @@ class TugasController extends Controller
     {
         //
     }
+
+    public function kirimtugas(Request $request)
+    {
+        $validation = $request->validate([
+            'link' => 'required'
+        ]);
+        $validation['user_id']=auth()->user()->id;
+        $validation['tugas_id']=$request->tugas;
+        TugasUser::create($validation);
+        
+        return back();
+    }
+
+    public function classwork($id)
+    {
+        return view('layout.classwork', [
+            'kelas' => Kelas::find($id)
+        ]);
+
+    }
+
+    
 }
